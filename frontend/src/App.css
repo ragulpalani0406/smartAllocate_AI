@@ -1,0 +1,35 @@
+/* App-level layout helpers */
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-layout,
+.app-main {
+  min-width: 0;
+  min-height: 0;
+}
+
+.app-content {
+  width: 100%;
+  text-align: left;
+}
+
+.app-content :where(h1, h2, h3, h4, h5, h6, p, span, label, td, th, button, a) {
+  overflow-wrap: break-word;
+}
+
+.app-content :where(h1, h2, h3) {
+  line-height: 1.2;
+}
+
+.app-content :where(p, li, td, th, label) {
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .app-content {
+    max-width: 100%;
+  }
+}
